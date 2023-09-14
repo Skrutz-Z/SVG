@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> SVG </title>
+    <center><u><b> SVG ASSIGNMENT <BR><center> 1 Q2 </center></b></u></center>
+    <center> <p> Name : Shubh Rakesh Nahar <br> Student ID : 1681276 </p> </center>
+</head>
+
+<body>
+    <div style="width: 900; text-align: center">
+        <svg width=900 height=500>
+        </svg>
+        </div>
+        <script>
+            const svgwidth = 900;
+            const svgheight = 500;
+
+            for (i = 0; i < 50; i++) {
+                const Rect1 = window.document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+                Rect1.setAttribute('x', "50");
+                Rect1.setAttribute('y', i * 25);
+                Rect1.setAttribute('width', "700");
+                Rect1.setAttribute('height', "500");
+                Rect1.setAttribute('stroke', "white");
+                /* Rect.setAttribute('fill', "black");*/
+                Rect1.setAttribute('stroke-width', "5");
+                const firstsvg = document.querySelector("svg");
+                firstsvg.appendChild(Rect1);
+            }
+            const myMask = window.document.createElementNS('http://www.w3.org/2000/svg', 'mask');
+            myMask.setAttribute('width', 500);
+            myMask.setAttribute('height', 100);
+            myMask.setAttribute('id', "newmask");
+
+            const mypolygon = window.document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+            mypolygon.setAttribute('points', "250 200,380 350,500 200");
+            mypolygon.setAttribute('fill', "white");
+            myMask.appendChild(mypolygon);
+            const firstsvg = document.querySelector("svg");
+            firstsvg.appendChild(myMask);
+
+            for (i = 0; i < 50; i++) {
+                const Rect = window.document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+                Rect.setAttribute('x', i * 10);
+                Rect.setAttribute('y', "50");
+                Rect.setAttribute('width', "90");
+                Rect.setAttribute('height', "500");
+                Rect.setAttribute('stroke', "black");
+                Rect.setAttribute('stroke-width', "5");
+                Rect.setAttribute('fill', "white");
+                Rect.setAttribute('mask', "url(#newmask)");
+                const firstsvg = document.querySelector("svg");
+                firstsvg.appendChild(Rect);
+            }
+
+
+
+
+
+
+        </script>
+
+
+</body>
+
+
+
+</html>

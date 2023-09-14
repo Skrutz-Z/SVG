@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SVG Design Circles Q2</title>
+    <center><u><b> SVG ASSIGNMENT <BR><center> 1 Q2 </center></b></u></center>
+    <center> <p> Name : Shubh Rakesh Nahar <br> Student ID : 1681276 </p> </center>
+    
+</head>
+<body>
+    <div style="width: 900; text-align: center">
+        <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+    </div>
+
+
+    <script>
+        const centerX = 250;
+        const centerY = 550;
+        const numCircles = 45;
+        let radius = 10;
+
+        for (let i = 0; i < numCircles; i++) {
+            const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            circle.setAttribute("cx", centerX);
+            circle.setAttribute("cy", centerY);
+            circle.setAttribute('r', radius + i * 10);
+            const randomStrokeColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+            circle.setAttribute("stroke", randomStrokeColor);
+            circle.setAttribute("stroke-width", "13");
+            circle.setAttribute("fill", "none");
+            document.querySelector("svg").appendChild(circle);
+            
+        }
+
+        const centerX1 = 0;
+        const centerY1 = 0;
+        const numCircles1 = 47;
+        let radius1 = 10;
+
+        for (let j = 0; j < numCircles1; j++) {
+            const circle1 = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            circle1.setAttribute("cx", centerX1);
+            circle1.setAttribute("cy", centerY1);
+            circle1.setAttribute('r', radius1 + j * 10);;
+            const randomStrokeColor1 = "#" + Math.floor(Math.random() * 16777215).toString(16);
+            circle1.setAttribute("stroke", randomStrokeColor1);
+            circle1.setAttribute("stroke-width", "15");
+            circle1.setAttribute("fill", "none");
+            document.querySelector("svg").appendChild(circle1);
+            
+        }
+
+        const centerX2 = 505;
+        const centerY2 = 10;
+        const numCircles2 = 45;
+        let radius2 = 10;
+
+        for (let k = 0; k < numCircles2; k++) {
+            const circle2 = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            circle2.setAttribute("cx", centerX2);
+            circle2.setAttribute("cy", centerY2);
+            circle2.setAttribute('r', radius2 + k * 10);;
+            const randomStrokeColor2 = "#" + Math.floor(Math.random() * 16777215).toString(16);
+            circle2.setAttribute("stroke", randomStrokeColor2);
+            circle2.setAttribute("stroke-width", "15");
+            circle2.setAttribute("fill", "none");
+            document.querySelector("svg").appendChild(circle2);
+
+        }
+    </script>
+    </svg>
+
+</body>
+</html>
